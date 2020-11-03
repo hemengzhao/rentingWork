@@ -10,10 +10,15 @@ const routes = [
     path: '/setting',
     name: 'Setting',
     component: () => import('/@/views/Setting.vue')
+  },
+  {
+    path: '/lifeCycle',
+    name: 'lifeCycle',
+    component: () => import('/@/views/LifeCycle.vue')
   }
 ]
 
 export default createRouter({
-  history: createWebHistory('/start-vue3/'),
+  history: createWebHistory('/krry/'),
   routes
 })
