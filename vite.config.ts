@@ -1,11 +1,12 @@
-import path from 'path'
+import vue from '@vitejs/plugin-vue'
+const { resolve } = require('path')
 
-module.exports = {
+/**
+ * @type {import('vite').UserConfig}
+ */
+export default {
   alias: {
-    '/@/': path.resolve(__dirname, './src')
+    '@': resolve(__dirname, 'src')
   },
-  optimizeDeps: {
-    include: ['lodash']
-  },
-  proxy: {}
+  plugins: [vue()]
 }
