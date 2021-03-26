@@ -4,12 +4,12 @@
       <h1 class="towH">小改变，大影响。</h1>
       <div class="news-content">
         <div v-for="item in 8" :key='item' class="back">
-          <p>
+          <p v-if='[2, 4, 5, 7].indexOf(item) == -1'>
             英国留学兼职<br/>
             那些事儿<br/>
               <span>-></span>
           </p>
-          <div>
+          <div v-if='[2, 4, 5, 7].indexOf(item) == -1'>
               如果可以找到与专业比较契合
               的而工作，对于将来毕业之后
               找工作也有很大的帮助。
@@ -53,6 +53,7 @@
       height: 180px;
       padding: 20px;
       color: #fff;
+      overflow: hidden;
       &:nth-child(1){
         background: #73D6CB;
       }
