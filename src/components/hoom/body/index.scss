@@ -1,0 +1,40 @@
+.content{
+    padding-top: 70px;
+    min-height: 400px;
+    h1{
+        margin: 0;
+        &.towH{
+            font-size: 23px;
+            font-family: FZLTHPro Global;
+            font-weight: 400;
+            line-height: 40px;
+
+        }
+    }
+    
+}
+p{
+    margin: 0;
+}
+.animationBackColor{
+    position: relative;
+    &::after{
+        position: absolute;
+        left: 0;
+        top: -1px;
+        width: 0;
+        height: calc(100% + 2px);
+        content: '';
+        display: block;
+     
+        transition: all .4s;
+    }
+
+    &:hover{
+        &::after{
+            left: 0;
+            width: 100%;
+            background-color: aquamarine;
+        }
+    }
+}
